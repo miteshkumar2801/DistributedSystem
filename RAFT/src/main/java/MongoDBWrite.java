@@ -1,4 +1,7 @@
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 
 import com.mongodb.*;
@@ -21,9 +24,9 @@ public class MongoDBWrite {
             // create a document to store key and value
             BasicDBObject document = new BasicDBObject();
 //            document.put("id",1);
-            document.put("term",3);
-            document.put("index", 4);
-            document.put("decree", 5);
+            document.put("term",6);
+            document.put("index", 10);
+            document.put("decree", 3);
             table.insert(document);
 
             /**** Find and display ****/
@@ -33,13 +36,22 @@ public class MongoDBWrite {
             // Read db's collection and populate hash
             DBCursor cursor = table.find();
             System.out.println("cursor is"+cursor);
+            ArrayList<Integer> indexColl = new ArrayList<>();
             while (cursor.hasNext()) {
 //                    System.out.println(cursor.next());
                 DBObject dbobject = cursor.next();
                 System.out.println(dbobject.get("term"));
                 System.out.println(dbobject.get("index"));
                 System.out.println(dbobject.get("decree"));
+                int a = (int)dbobject.get("index");
+                System.out.println(a);
+                indexColl.add(a);
+
             }
+            Collections.sort(indexColl);
+            int lastLogIndex = indexColl.get(indexColl.size()-1);
+            System.out.println("LastLogIndex"+lastLogIndex);
+
            /* Read DB and populate logHash*/
 
         }

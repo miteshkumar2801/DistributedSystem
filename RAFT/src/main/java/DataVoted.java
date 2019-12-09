@@ -22,7 +22,7 @@ public class DataVoted {
             writer.flush();
             System.out.println("success...");
         } catch(Exception e) {
-            System.out.println(e);
+            System.out.println("Not able to write");
         }
 
     }

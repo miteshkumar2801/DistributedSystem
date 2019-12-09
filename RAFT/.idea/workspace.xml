@@ -2,18 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba2a339-53c6-4dd3-a3a0-39f12769073f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ChainReplication/chain/java/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ChainReplication/chain/java/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ChainReplication/chain/java/src/main/java/edu/sjsu/cs249/chain/HeadChainServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataVoted.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MongoDBWrite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RaftMod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SQLLite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TestTimer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainReplication/chain/java/src/main/java/edu/sjsu/cs249/chain/HeadChainServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainReplication/chain/java/src/main/java/edu/sjsu/cs249/chain/HeadChainServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/1608.06696v1.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_google_android_annotations_4_1_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_google_auth_google_auth_library_credentials_0_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_google_code_gson_gson_2_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_google_guava_guava_26_0_android.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_squareup_okhttp_okhttp_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__com_squareup_okio_okio_1_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_all_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_api_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_auth_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_context_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_core_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_netty_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_okhttp_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_protobuf_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_protobuf_lite_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_stub_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_grpc_grpc_testing_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_buffer_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_codec_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_common_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_handler_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_resolver_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_netty_netty_transport_4_1_38_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_opencensus_opencensus_api_0_21_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_opencensus_opencensus_contrib_grpc_metrics_0_21_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__io_perfmark_perfmark_api_0_17_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/.pom.xml.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/abd-java.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/src/main/java/edu/sjsu/cs249/abd/ABDClient.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/ADB_Assignment/abd/java/src/main/java/edu/sjsu/cs249/abd/ABDServer.java" beforeDir="false" />
@@ -34,6 +71,38 @@
       <change beforePath="$PROJECT_DIR$/../Dist_249/p124-herlihy.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/podc-02.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/vr-revisited.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/Voted" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Voted" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/configFile" beforeDir="false" afterPath="$PROJECT_DIR$/Files/configFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataVoted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataVoted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MongoDBWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MongoDBWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RaftMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RaftMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQLLite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sqlite-jdbc-3.27.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MongoDBWrite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MongoDBWrite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RaftMod$ElectionTimerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RaftMod$ElectionTimerTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RaftMod$HeartBeatTimerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RaftMod$HeartBeatTimerTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RaftMod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RaftMod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesRequest$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesResponse$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendRequest$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendResponse$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexRequest$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexResponse$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/Entry$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/Entry$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/Entry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteRequest$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteResponse$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/raft-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/raft-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/raft-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/raft-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,13 +141,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11125" />
+          <entry key="java" value="14987" />
+          <entry key="proto" value="16" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11125" />
+          <entry key="JAVA" value="14987" />
+          <entry key="PROTO" value="16" />
           <entry key="XML" value="8" />
         </counts>
       </usages-collector>
@@ -107,33 +178,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/proto/raft.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RaftMod.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="676">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SQLLite.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RaftMod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1175#1176#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="404">
+              <caret line="278" column="72" selection-start-line="278" selection-start-column="72" selection-end-line="278" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -141,8 +199,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DataVoted.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+            <state relative-caret-position="259">
+              <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,20 +211,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TestTimer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
+            <state relative-caret-position="286">
               <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MongoDBWrite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,10 +238,10 @@
         <option value="$PROJECT_DIR$/../ChainReplication/chain/java/src/main/java/edu/sjsu/cs249/chain/HeadChainServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ExecutorDriver.java" />
         <option value="$PROJECT_DIR$/src/main/java/TestTimer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DataVoted.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/SQLLite.java" />
         <option value="$PROJECT_DIR$/src/main/java/MongoDBWrite.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DataVoted.java" />
         <option value="$PROJECT_DIR$/src/main/java/RaftMod.java" />
       </list>
     </option>
@@ -319,7 +365,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575851241301" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575866792272" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -421,7 +467,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32650602" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1373494" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -429,7 +475,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -450,7 +496,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32650602" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31686747" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -458,14 +504,14 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" sideWeight="0.49878642" visible="true" weight="0.1602289" />
+      <window_info anchor="right" id="Maven Projects" order="6" sideWeight="0.49878642" weight="0.1602289" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Coverage" order="8" sideWeight="0.5012136" side_tool="true" weight="0.08869814" />
     </layout-to-restore>
@@ -498,27 +544,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestTimer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/raft.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -533,20 +562,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataVoted.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MongoDBWrite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+        <state relative-caret-position="625">
+          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MongoDBWrite.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/TestTimer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="286">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DataVoted.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -555,8 +594,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RaftMod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="404">
+          <caret line="278" column="72" selection-start-line="278" selection-start-column="72" selection-end-line="278" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/raft.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>

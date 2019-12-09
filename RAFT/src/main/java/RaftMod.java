@@ -35,13 +35,13 @@ import com.mongodb.*;
 public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
     public static String votedFile = "/Users/mitesh/Desktop/SE/cs249/DistributedSystem/RAFT/Files/Voted";
     public static String ConfigFile = "/Users/mitesh/Desktop/SE/cs249/DistributedSystem/RAFT/Files/configFile", serverIp = "192.168.1.123";
-    public static int serverPort = 1111;
-    public static HashMap<Long,String> log;
+    public static int serverPort;
     public  static Integer minElectionTimeout = 10000,  maxElectionTimeout = 15000, numofServers = 0, heartbeatTimeout = 5000;
     public static HashMap<Integer,String> configFileMap;
     public static HashMap<Integer,RaftServerGrpc.RaftServerBlockingStub> stubsMap;
     public static int lastLogIndex = 0;
     public static int lastLogTerm = 0;
+    public static int leaderID;
     public static int votedFor; //candidateId for which voted
     public static AtomicBoolean heartBeat = new AtomicBoolean(false);
     public static ExecutorService executorService;
@@ -59,6 +59,7 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
     public static MongoClient mongoClient;
     public static DB db;
     public static DBCollection table;
+    public static DataVoted dataVoted = new DataVoted(votedFile);
 
     public static class ElectionTimerTask extends TimerTask {
         @Override
@@ -72,6 +73,7 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
         public void run() {
 //            resetElectionTimer();
             System.out.println("HeartBeat Ping");
+            System.out.println("I am the Leader "+ SERVER_ID);
             for (int key : stubsMap.keySet()) {
                 try {
                     AppendEntriesResponse appendEntriesResponse = stubsMap.get(key).withDeadlineAfter(100,TimeUnit.MILLISECONDS).appendEntries(AppendEntriesRequest.newBuilder().setTerm(CURRENT_TERM.get()).build());
@@ -94,7 +96,7 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
     @Override
     public void requestVote(RequestVoteRequest request, StreamObserver<RequestVoteResponse> responseObserver) {
         //super.requestVote(request, responseObserver);
-        System.out.println("Inside requestVote");
+        System.out.println("Inside requestVote" + request.getTerm() + CURRENT_TERM.get());
         if (request.getTerm() < CURRENT_TERM.get()) {
             RequestVoteResponse voteResponse = RequestVoteResponse.newBuilder().setTerm(CURRENT_TERM.get()).setVoteGranted(false).build();
             responseObserver.onNext(voteResponse);
@@ -108,13 +110,16 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
             //TODO(Mitesh)-- WriteFile votedFor
             System.out.println("Response sent with Voted");
             resetElectionTimer();
-
+            try {
+//            dataVoted.FileWrite((int)request.getTerm(), request.getCadidateId());
+            } catch ( Exception e) {
+                System.out.println("Writing to file taking a lot of time");
+            }
         }
     }
 
     @Override
-    public void appendEntries(AppendEntriesRequest request, StreamObserver<AppendEntriesResponse> responseObserver) {
-        //super.appendEntries(request, responseObserver);
+    public void appendEntries(AppendEntriesRequest request, StreamObserver<AppendEntriesResponse> responseObserver)  {
         //If follower :
         //Mitesh -- Put more conditions here
         System.out.println("Inside appendEntries");
@@ -123,16 +128,36 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
             responseObserver.onNext(appendEntriesResponse);
             responseObserver.onCompleted();
         } else {
-            System.out.println("Inside appendEntries Else");
+            //true -- HeartBest
+            if (true) {
+                System.out.println("Inside appendEntries Else");
                 System.out.println("Inside appendEntries Else2");
                 resetElectionTimer();
-                //TODO(Mitesh) -- When to update Log
-                /*
-                lastLogIndex = (int) request.getPrevLogIndex();
-                lastLogTerm = (int) request.getTerm();
-                Entry entry = request.getEntry();
-                updateLog(entry);
-                */
+                leaderID = request.getLeaderId();
+            } else {
+
+
+            /*
+            //TODO(Mitesh) -- When to update Log -- Revisit
+            //If appendEntries but not HeartBeat
+            lastLogIndex = (int)request.getPrevLogIndex();
+            lastLogTerm = (int)request.getTerm();
+            Entry entry = request.getEntry();
+            int decree = Integer.valueOf(entry.getDecree());
+            try {
+                mongoDBWrite(lastLogTerm,lastLogIndex,decree);
+            } catch (UnknownHostException e) {
+                e.printStackTrace();
+            }
+            /*
+            }
+            lastLogIndex = (int) request.getPrevLogIndex();
+            lastLogTerm = (int) request.getTerm();
+            Entry entry = request.getEntry();
+            updateLog(entry);
+            */
+            }
+
         }
     }
 
@@ -182,40 +207,6 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
 
     }
 
-    public  static void logDBWrite(MongoClient mongoClient, DB db, DBCollection col) {
-        //WriteResult result = col.insert(doc);
-    }
-
-
-    public static void logDBRead(MongoClient mongoClient, DB db, DBCollection col) {
-//        DBObject query = BasicDBObjectBuilder.start().add("_id", user.getId()).get();
-//        DBCursor cursor = col.find(query);
-//        while(cursor.hasNext()){
-//            System.out.println(cursor.next());
-//        }
-//        //put it in votedForMap
-    }
-
-    public static void updateLog(Entry entry) {
-        String str = String.valueOf(entry.getTerm())+" "+ String.valueOf(entry.getDecree());
-        System.out.println (entry.getIndex());
-        System.out.println (str);
-        log.put(entry.getIndex(),str);
-
-    }
-
-    public static void fetchLog() {
-        Set keys = log.keySet();
-        List list = new ArrayList(keys);
-        Collections.sort(list);
-
-        String temp = log.get(list.get(list.size()-1));
-        String term = temp.split(" ")[0];
-        String decree = temp.split(" ")[1];
-        lastLogTerm = Integer.valueOf(term);
-        lastLogIndex = (int)list.get(list.size()-1);
-    }
-
 
     public  static  void startElection() {
         System.out.println("In startElection");
@@ -226,7 +217,7 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
                 System.out.println("Mitesh :: Implement threadpool here");
                 majoritycounter += 1;
             } catch ( Exception e) {
-
+                System.out.println("Response Not coming from"+ keys);
             }
 
         }
@@ -268,29 +259,108 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
     }
 
 
-   public static void main(String args[]) throws IOException,InterruptedException{
-        //Read DataVoted File to populate currentTerm and VotedFor
+    @Override
+    public void clientAppend(ClientAppendRequest request, StreamObserver<ClientAppendResponse> responseObserver) {
+        ClientAppendResponse response;
+        if (!isLeader) {
+            response = ClientAppendResponse.newBuilder().setRc(1).setIndex(lastLogIndex).setLeader(leaderID).build();
+        } else {
+            response = ClientAppendResponse.newBuilder().setRc(0).setIndex(lastLogIndex).setLeader(leaderID).build();
+
+        }
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void clientRequestIndex(ClientRequestIndexRequest request, StreamObserver<ClientRequestIndexResponse> responseObserver) {
+        ClientRequestIndexResponse response;
+        if (!isLeader) {
+            response = ClientRequestIndexResponse.newBuilder().setIndex()build();
+        } else {
+
+        }
+
+
+
+
+
+
+    }
+
+
+
+    public void mongoDBWrite(int term, int index, int decree) throws UnknownHostException {
+        // create a document to store key and value
+        BasicDBObject document = new BasicDBObject();
+//            document.put("id",1);
+        document.put("term",term);
+        document.put("index", index);
+        document.put("decree", decree);
+        table.insert(document);
+        System.out.println("Inserted in MongoDB "+ term + index + decree);
+
+
+
+        // Read db's collection and populate hash
+
+    }
+
+    public static void mongoDBRead() {
+        /**** Find and display ****/
+        BasicDBObject searchQuery = new BasicDBObject();
+        DBCursor cursor = table.find();
+        System.out.println("cursor is"+cursor);
+
+        int maxIndex = -1;
+        while (cursor.hasNext()) {
+//                    System.out.println(cursor.next());
+            DBObject dbobject = cursor.next();
+            System.out.println(dbobject.get("term"));
+            System.out.println(dbobject.get("index"));
+            System.out.println(dbobject.get("decree"));
+//          int  = (int)dbobject.get("term");
+            int a = (int)dbobject.get("index");
+            if (a > maxIndex) {
+                maxIndex = a;
+                lastLogIndex = a;
+                lastLogTerm = (int)dbobject.get("term");
+            }
+        }
+    }
+
+
+
+
+    public static void main(String args[]) throws IOException,InterruptedException{
+        //MongoDB connection for lastLogIndex, lastLogTerm and populate log and write log to DB
         mongoClient = new MongoClient("localhost", 27017);
-        DB db = mongoClient.getDB("raftLog");
-
-        /**** Get collection / table from 'testdb' ****/
-        // if collection doesn't exists, MongoDB will create it for you
-        DBCollection table = db.getCollection("log");
-
+        db = mongoClient.getDB("raftLog");
+        table = db.getCollection("log");
+        //Read Mongodb collection
+        mongoDBRead();
 
 
 
-
-        DataVoted dataVoted = new DataVoted(votedFile);
+        //Read DataVoted File to populate currentTerm and VotedFor
         ArrayList<Integer> arrayList = dataVoted.FileRead();
-        CURRENT_TERM.set(arrayList.get(0));
-
+        if (arrayList.size() > 0) {
+            CURRENT_TERM.set(arrayList.get(0));
+        } else {
+            CURRENT_TERM.set(0);
+        }
         serverIp = args[0];
         serverPort = Integer.parseInt(args[1]);
 //        int serverPort = 1111;
 
 
         readConfigFile();
+        System.out.println("CURRENT_TERM "+CURRENT_TERM.get());
+        System.out.println("NumofServers "+numofServers);
+        System.out.println("LastLogIndex "+lastLogIndex);
+        System.out.println("LastLogterm "+ lastLogTerm);
+
+
         raftMod = new RaftMod(serverIp,serverPort);
         raftMod.createStubs();
 
@@ -308,37 +378,4 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
 
     }
 
-
-
-    public void mongoDB() throws UnknownHostException {
-        MongoClient mongo = new MongoClient("localhost", 27017);
-
-        /**** Get database ****/
-        // if database doesn't exists, MongoDB will create it for you
-
-
-        /**** Insert ****/
-        // create a document to store key and value
-        BasicDBObject document = new BasicDBObject();
-//            document.put("id",1);
-        document.put("term",3);
-        document.put("index", 4);
-        document.put("decree", 5);
-        table.insert(document);
-
-        /**** Find and display ****/
-        BasicDBObject searchQuery = new BasicDBObject();
-        searchQuery.put("term", "1");
-
-        // Read db's collection and populate hash
-        DBCursor cursor = table.find();
-        System.out.println("cursor is"+cursor);
-        while (cursor.hasNext()) {
-//                    System.out.println(cursor.next());
-            DBObject dbobject = cursor.next();
-            System.out.println(dbobject.get("term"));
-            System.out.println(dbobject.get("index"));
-            System.out.println(dbobject.get("decree"));
-        }
-    }
 }
