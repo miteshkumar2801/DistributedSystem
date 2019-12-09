@@ -39,9 +39,11 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
     public  static Integer minElectionTimeout = 10000,  maxElectionTimeout = 15000, numofServers = 0, heartbeatTimeout = 5000;
     public static HashMap<Integer,String> configFileMap;
     public static HashMap<Integer,RaftServerGrpc.RaftServerBlockingStub> stubsMap;
-    public static int lastLogIndex = 0;
+    public static int lastLogIndex = 0, currIndex = 1;
     public static int lastLogTerm = 0;
     public static int leaderID;
+    public static String lastdecree;
+
     public static int votedFor; //candidateId for which voted
     public static AtomicBoolean heartBeat = new AtomicBoolean(false);
     public static ExecutorService executorService;
@@ -263,10 +265,34 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
     public void clientAppend(ClientAppendRequest request, StreamObserver<ClientAppendResponse> responseObserver) {
         ClientAppendResponse response;
         if (!isLeader) {
-            response = ClientAppendResponse.newBuilder().setRc(1).setIndex(lastLogIndex).setLeader(leaderID).build();
+            response = ClientAppendResponse.newBuilder().setRc(1).setIndex(currIndex).setLeader(leaderID).build();
         } else {
-            response = ClientAppendResponse.newBuilder().setRc(0).setIndex(lastLogIndex).setLeader(leaderID).build();
+            currIndex += 1;
+            lastLogIndex = currIndex;
+            lastdecree = request.getDecree();
+            //Update Log
+            try {
+                mongoDBWrite(CURRENT_TERM.get(),currIndex,request.getDecree());
+            } catch (UnknownHostException e) {
+                e.printStackTrace();
+            }
+            int count = 0;
+            //Send RPCs to all nodes
+            for (int key  : stubsMap.keySet()) {
+                try {
+                    AppendEntriesResponse appendEntriesResponse = stubsMap.get(key).appendEntries(AppendEntriesRequest.newBuilder().setTerm(CURRENT_TERM.get()).build());
+                    count ++;
+                } catch (Exception e) {
+                }
+            }
 
+            if (count >= numofServers/2) {
+                response = ClientAppendResponse.newBuilder().setRc(0).setIndex(currIndex).setLeader(SERVER_ID).build();
+            } else {
+                //TODO (Mitesh) -- What if majority does not respond
+                response = ClientAppendResponse.newBuilder().setRc(0).setIndex(currIndex).setLeader(SERVER_ID).build();
+
+            }
         }
         responseObserver.onNext(response);
         responseObserver.onCompleted();
@@ -276,13 +302,22 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
     public void clientRequestIndex(ClientRequestIndexRequest request, StreamObserver<ClientRequestIndexResponse> responseObserver) {
         ClientRequestIndexResponse response;
         if (!isLeader) {
-            response = ClientRequestIndexResponse.newBuilder().setIndex()build();
+            response = ClientRequestIndexResponse.newBuilder().setIndex(lastLogIndex).setRc(1).setLeader(leaderID).setDecree(lastdecree).build();
         } else {
+            String decree = getDecree((int)request.getIndex());
+            int tmpIndex = (int)request.getIndex();
+            String tmpDecree = decree;
+
+            if (decree == ""){
+                tmpIndex = lastLogIndex;
+                tmpDecree = lastdecree;
+            }
+            response = ClientRequestIndexResponse.newBuilder().setIndex(tmpIndex).setRc(0).setLeader(leaderID).setDecree(tmpDecree).build();
 
         }
 
-
-
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
 
 
 
@@ -290,7 +325,7 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
 
 
 
-    public void mongoDBWrite(int term, int index, int decree) throws UnknownHostException {
+    public void mongoDBWrite(int term, int index, String decree) throws UnknownHostException {
         // create a document to store key and value
         BasicDBObject document = new BasicDBObject();
 //            document.put("id",1);
@@ -325,9 +360,28 @@ public class RaftMod extends RaftServerGrpc.RaftServerImplBase {
                 maxIndex = a;
                 lastLogIndex = a;
                 lastLogTerm = (int)dbobject.get("term");
+                lastdecree = (String)dbobject.get("decree");
             }
         }
     }
+
+
+    public String getDecree(int index) {
+          BasicDBObject searchQuery = new BasicDBObject("index",index);
+          DBCursor cursor = table.find(searchQuery);
+          String decree = "";
+          while (cursor.hasNext()) {
+              DBObject dbobject = cursor.next();
+              System.out.println(dbobject.get("index"));
+              if (index == (int)dbobject.get("index")) {
+                  decree = (String) dbobject.get("decree");
+              }
+
+          }
+          return decree;
+    }
+
+
 
 
 

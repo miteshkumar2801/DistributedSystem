@@ -71,38 +71,9 @@
       <change beforePath="$PROJECT_DIR$/../Dist_249/p124-herlihy.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/podc-02.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dist_249/vr-revisited.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/Voted" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Voted" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/configFile" beforeDir="false" afterPath="$PROJECT_DIR$/Files/configFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataVoted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataVoted.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MongoDBWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MongoDBWrite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RaftMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RaftMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SQLLite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sqlite-jdbc-3.27.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MongoDBWrite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MongoDBWrite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RaftMod$ElectionTimerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RaftMod$ElectionTimerTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RaftMod$HeartBeatTimerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RaftMod$HeartBeatTimerTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RaftMod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RaftMod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesRequest$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesResponse$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/AppendEntriesResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendRequest$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendResponse$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientAppendResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexRequest$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexResponse$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/ClientRequestIndexResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/Entry$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/Entry$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/Entry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteRequest$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteResponse$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/sjsu/cs249/raft/RequestVoteResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/raft-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/raft-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/raft-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/raft-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SQLLite.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -128,27 +99,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="8" />
+          <entry key="java" value="9" />
           <entry key="proto" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="8" />
+          <entry key="JAVA" value="9" />
           <entry key="PROTO" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14987" />
+          <entry key="java" value="17370" />
           <entry key="proto" value="16" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14987" />
+          <entry key="JAVA" value="17370" />
           <entry key="PROTO" value="16" />
           <entry key="XML" value="8" />
         </counts>
@@ -178,20 +149,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/proto/raft.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="522">
+              <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/RaftMod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="278" column="72" selection-start-line="278" selection-start-column="72" selection-end-line="278" selection-end-column="72" />
+            <state relative-caret-position="156">
+              <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -220,6 +191,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MongoDBWrite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -240,8 +223,8 @@
         <option value="$PROJECT_DIR$/src/main/java/TestTimer.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/SQLLite.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MongoDBWrite.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataVoted.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MongoDBWrite.java" />
         <option value="$PROJECT_DIR$/src/main/java/RaftMod.java" />
       </list>
     </option>
@@ -365,7 +348,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575866792272" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575873736099" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -458,7 +441,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16309012" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16309012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -467,7 +450,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1373494" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.062650606" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -544,13 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SQLLite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
@@ -558,16 +534,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1175#1176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MongoDBWrite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -592,17 +558,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RaftMod.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="278" column="72" selection-start-line="278" selection-start-column="72" selection-end-line="278" selection-end-column="72" />
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MongoDBWrite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/proto/raft.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="522">
+          <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RaftMod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
         </state>
       </provider>
     </entry>
